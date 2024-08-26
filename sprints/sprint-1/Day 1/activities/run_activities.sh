@@ -64,6 +64,8 @@ echo "Summary:"
 echo "Completed Activities: $completed_activities/$total_activities"
 echo ""
 
+read -p "Presiona cualquier tecla para continuar..."
+
 if [ ${#missing_activities[@]} -eq 0 ]; then
   echo "Congratulations! All activities are completed."
 else

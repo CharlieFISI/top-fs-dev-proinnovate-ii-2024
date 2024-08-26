@@ -1,19 +1,20 @@
-# Name -> your name here    
+# Name -> Charlie Elizarbe Camus
 
-Tell us something about yourself that you'd like everyone to know: Who are you? What do you like to do? Where are you from?
+Hola,
+Soy Charlie Elizarbe Camus, me gusta programar y aprender nuevas tecnologías, soy de Perú, Lima.
 
 ## Social Profiles
 
-- [Github](https://github.com/makeitrealcamp/)
-- [Linkedin](https://www.linkedin.com/company/make-it-real-camp/)
-- [Website](https://gogole.com/)
+- [Github](https://github.com/CharlieFISI)
+- [Linkedin](https://www.linkedin.com/in/charlieec/)
+- [Website]()
 
 ## Technical Experience
 
 > On a scale of 1 to 5, how do you feel technically in these areas: ⭐️⭐️⭐️⭐️⭐️
 
-- Programming: ⭐️
-- JavaScript: ⭐️
-- CSS: ⭐️
-- HTML: ⭐️
-- Git: ⭐️
+- Programming: ⭐️⭐️⭐️⭐️
+- JavaScript: ⭐️⭐️⭐️⭐️⭐️
+- CSS: ⭐️⭐️
+- HTML: ⭐️⭐️
+- Git: ⭐️⭐️⭐️
