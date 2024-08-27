@@ -1,41 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stitch Gym</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuButton = document.getElementById("button-nav");
+      const navLinks = document.getElementById("nav-links");
 
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <!-- add css file -->
-</head>
-
-<body>
-
-  <div id="hero">
-    <div class="container">
-      <div class="content">
-        <div class="topper">Best Gym Of The City For Fitness</div>
-        <div class="title">You Can Boost Your Strength</div>
-        <div class="text">
-          Develop confidence, composure under pressure and the discipline needed to be a champ. This is the club you’ve
-          been looking for.
+      menuButton.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+      });
+    });
+  </script>
+  <body>
+    <header id="head">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <span>
+            <img src="assets/icons/Message.svg" alt="email-icon" />
+            stitchgym@gmail.com
+          </span>
+          <span>
+            <img src="assets/icons/Call.svg" alt="phone-icon" />
+            Call us: +84 1985 33 999
+          </span>
+          <span>
+            <img src="assets/icons/Clock.svg" alt="schedule-icon" />
+            Opening hours: Mon - Sat: 8:00am To 9:00pm
+          </span>
         </div>
-        <div class="button-group">
-          <a href="" class="button-solid ">Read More</a>
+        <div class="top-bar-right">
+          <img src="assets/icons/Facebook.svg" alt="facebook-icon" />
+          <img src="assets/icons/Twitter.svg" alt="twitter-icon" />
+          <img src="assets/icons/Instagram.svg" alt="instagram-icon" />
         </div>
       </div>
+    </header>
+
+    <nav id="menu">
+      <div class="nav">
+        <img class="logo" src="assets/Logo.svg" alt="Stitch Gym" />
+        <button class="button-nav" id="button-nav">
+          <img src="assets/icons/Bars.svg" alt="menu-icon" />
+        </button>
+        <div class="nav-links" id="nav-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+              <a href="#">Services</a>
+              <img src="assets/icons/DownArrow.svg" alt="down-arrow-icon" />
+              <ul class="dropdown-content">
+                <li><a href="#">Personal Training</a></li>
+                <li><a href="#">Nutrición</a></li>
+                <li><a href="#">Yoga</a></li>
+                <li><a href="#">Cardio</a></li>
+                <li><a href="prices.html">Planes</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Classes</a>
+              <img src="assets/icons/DownArrow.svg" alt="down-arrow-icon" />
+              <ul class="dropdown-content">
+                <li><a href="#">Bodybuilding</a></li>
+                <li><a href="#">Crossfit</a></li>
+                <li><a href="#">Aeróbicos</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <button class="button-menu">
+            <a href="" class="button-solid">Join Us Today</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="hero">
+      <div class="container">
+        <div class="content">
+          <div class="topper">Best Gym Of The City For Fitness</div>
+          <div class="title">You Can Boost Your Strength</div>
+          <div class="text">
+            Develop confidence, composure under pressure and the discipline
+            needed to be a champ. This is the club you’ve been looking for.
+          </div>
+          <div class="button-group">
+            <a href="" class="button-solid">Get started</a>
+          </div>
+        </div>
+      </div>
+      <div class="background">
+        <img
+          class="background-hero"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.png"
+          alt="hero-image"
+          quality="100"
+        />
+        <div class="background-overlay" />
+      </div>
+      <img
+        class="graphic"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-splatter2.svg"
+        alt="graphic"
+        height="161"
+        width="1920"
+        loading="lazy"
+        decoding="async"
+      />
     </div>
-
-
- 
-<img src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-hero.png" alt="">
-
-    <img class="graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/white-splatter2.svg"
-      alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
-
-  </div>
-
-</body>
-
+  </body>
 </html>
-
-
-
