@@ -1,19 +1,25 @@
-@import 'variables';
+@use "../shared/variables";
 
-.pricing__button--solid {
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-align: center;
-    text-decoration: none;
-    min-width: 9.375rem;
-    margin-top: 2rem;
-    padding: 0 1.5rem;
-    color: var(--color-text-light);
-    background-color: var(--color-primary);
-    border-radius: 0.25rem;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
+.pricing__button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
+  border-radius: 0.3125rem;
+  transition: background-color 0.3s ease;
+
+  &--solid {
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+
+  &--plan {
+    width: 100%;
+    margin-top: 1.25rem;
+  }
 }
-

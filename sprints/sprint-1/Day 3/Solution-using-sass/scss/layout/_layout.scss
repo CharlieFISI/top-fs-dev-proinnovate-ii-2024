@@ -1,0 +1,60 @@
+@use "../shared/variables";
+
+.pricing {
+  &__container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__content {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 2rem;
+
+    @media (min-width: val(--breakpoint-small-desktop)) {
+      // flex-direction: row;
+      align-items: flex-start;
+    }
+
+    @media (min-width: val(--breakpoint-tablet)) {
+      flex-direction: column;
+    }
+  }
+
+  &__features {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: val(--breakpoint-small-desktop)) {
+      width: 30%;
+      padding-right: 2rem;
+    }
+  }
+
+  &__plans {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: val(--breakpoint-tablet)) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: val(--breakpoint-small-desktop)) {
+      width: 70%;
+    }
+  }
+}

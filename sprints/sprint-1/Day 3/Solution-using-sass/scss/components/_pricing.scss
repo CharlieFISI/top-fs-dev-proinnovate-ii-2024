@@ -1,10 +1,64 @@
-@import 'variables';
+@use "../shared/variables" as v;
 
 .pricing {
-    padding: var(--spacing-section-padding);
-    padding-bottom: 10vw;
-    background-color: var(--color-bg-light);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+  padding: var(--spacing-section-padding);
+  background-color: var(--color-bg-light);
+  position: relative;
+  overflow: hidden;
+
+  &__topper {
+    color: var(--color-primary);
+    font-size: var(--font-size-topper);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+  }
+
+  &__title {
+    font-size: var(--font-size-header);
+    font-weight: 700;
+    margin-bottom: 1.875rem;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.9375rem;
+    font-size: var(--font-size-body);
+  }
+
+  &__icon {
+    margin-right: 0.625rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__graphic {
+    position: absolute;
+    bottom: -3.125rem;
+    right: -3.125rem;
+    width: 18.75rem;
+    height: auto;
+    opacity: 0.1;
+    z-index: -1;
+
+    &--light {
+      filter: invert(1);
+    }
+  }
+
+  @media (min-width: var(breakpoint-small-desktop)) {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__features {
+      flex: 0 0 30%;
+    }
+
+    &__plans {
+      flex: 0 0 70%;
+    }
+  }
 }
