@@ -1,4 +1,4 @@
-@use "../shared/variables";
+@use "../shared/variables" as *;
 
 .pricing {
   &__container {
@@ -14,15 +14,12 @@
 
   &__wrapper {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
 
-    @media (min-width: val(--breakpoint-small-desktop)) {
-      // flex-direction: row;
+    @media (min-width: $breakpoint-small-desktop) {
+      flex-direction: row;
       align-items: flex-start;
-    }
-
-    @media (min-width: val(--breakpoint-tablet)) {
-      flex-direction: column;
     }
   }
 
@@ -32,7 +29,7 @@
     padding: 0;
     margin: 0;
 
-    @media (min-width: val(--breakpoint-small-desktop)) {
+    @media (min-width: $breakpoint-small-desktop) {
       width: 30%;
       padding-right: 2rem;
     }
@@ -47,13 +44,13 @@
     padding: 0;
     margin: 0;
 
-    @media (min-width: val(--breakpoint-tablet)) {
+    @media (min-width: $breakpoint-tablet) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
     }
 
-    @media (min-width: val(--breakpoint-small-desktop)) {
+    @media (min-width: $breakpoint-small-desktop) {
       width: 70%;
     }
   }

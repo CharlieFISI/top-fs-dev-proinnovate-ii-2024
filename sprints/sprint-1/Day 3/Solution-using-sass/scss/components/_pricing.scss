@@ -1,21 +1,21 @@
-@use "../shared/variables" as v;
+@use "../shared/variables" as *;
 
 .pricing {
-  padding: var(--spacing-section-padding);
-  background-color: var(--color-bg-light);
+  padding: $spacing-section-padding;
+  background-color: $color-bg-light;
   position: relative;
   overflow: hidden;
 
   &__topper {
-    color: var(--color-primary);
-    font-size: var(--font-size-topper);
+    color: $color-primary;
+    font-size: $font-size-topper;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 0.625rem;
   }
 
   &__title {
-    font-size: var(--font-size-header);
+    font-size: $font-size-header;
     font-weight: 700;
     margin-bottom: 1.875rem;
   }
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.9375rem;
-    font-size: var(--font-size-body);
+    font-size: $font-size-body;
   }
 
   &__icon {
@@ -47,7 +47,7 @@
     }
   }
 
-  @media (min-width: var(breakpoint-small-desktop)) {
+  @media (min-width: $breakpoint-small-desktop) {
     &__wrapper {
       display: flex;
       justify-content: space-between;

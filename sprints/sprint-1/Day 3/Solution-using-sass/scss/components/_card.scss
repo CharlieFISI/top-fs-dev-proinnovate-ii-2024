@@ -1,9 +1,9 @@
-@use "../shared/variables";
+@use "../shared/variables" as *;
 
 .pricing__plans {
   width: 100%;
   max-width: 57rem;
-  margin: var(--spacing-gap-large) 0 0 0;
+  margin: $spacing-gap-large 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -12,9 +12,9 @@
 
 .pricing__plan {
   width: 100%;
-  background-color: var(--color-bg-light);
+  background-color: $color-bg-light;
   border-radius: 0.625rem;
-  padding: var(--spacing-card-padding);
+  padding: $spacing-card-padding;
   text-align: center;
   box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -28,8 +28,8 @@
   }
 
   &--popular {
-    background-color: var(--color-text-dark);
-    color: var(--color-text-light);
+    background-color: $color-text-dark;
+    color: $color-text-light;
 
     @media (min-width: var(breakpoint-tablet)) {
       order: -1;
@@ -37,25 +37,25 @@
   }
 
   &-package {
-    font-size: var(--font-size-topper);
+    font-size: $font-size-topper;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 0.625rem;
   }
 
   &-price {
-    font-size: var(--font-size-header);
+    font-size: $font-size-header;
     font-weight: 700;
     margin-bottom: 0.3125rem;
   }
 
   &-frequency {
-    font-size: var(--font-size-body);
+    font-size: $font-size-body;
     margin-bottom: 1.25rem;
   }
 
   &-description {
-    font-size: var(--font-size-body);
+    font-size: $font-size-body;
     line-height: 1.5;
     margin-bottom: 1.875rem;
   }
