@@ -51,6 +51,7 @@
     }
 
     @media (min-width: $breakpoint-small-desktop) {
+      flex-direction: column;
       width: 70%;
     }
   }

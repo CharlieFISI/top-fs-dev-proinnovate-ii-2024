@@ -83,6 +83,7 @@
 }
 @media (min-width: 1024px) {
   .pricing__plans {
+    flex-direction: column;
     width: 70%;
   }
 }
