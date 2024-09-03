@@ -117,12 +117,18 @@ function calculateTotalQuantitySold(data) {
 ///// 2. flatMap() and groupBy()
 
 function groupOrdersByCustomer(data) {
-  return data.reduce((acc, order) => {
+  const orders = data.flatMap((order) => ({
+    customerName: order.customerName,
+    items: order.items,
+  }));
+
+  return orders.reduce((acc, order) => {
     const customerName = order.customerName;
+    const { customerName: _, ...orderWithoutConsumer } = order;
     if (!acc[customerName]) {
       acc[customerName] = [];
     }
-    acc[customerName].push(order);
+    acc[customerName].push(orderWithoutConsumer);
     return acc;
   }, {});
 }
@@ -155,7 +161,7 @@ function flattenAndSummarizeItems(data) {
 
 // console.log(flattenAndSummarizeItems(fakeAPI));
 
-///// 5. map() and filter()´
+///// 5. map() and filter()
 
 function getCustomersWithMultipleOrders(data) {
   const customers = data.filter((order) => order.items.length > 1);
