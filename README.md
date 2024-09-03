@@ -1,7 +1,7 @@
-
 # Top Full Stack Developer Program Proinnóvate 2024
 
 ## Mentors 👩🏻‍🏫👨🏼‍🏫
+
 - Shymmy W. Garcia
 - Mentor 2
 - Mentor 3
@@ -15,11 +15,11 @@
 
 ## What is a typical study day like during the TOP program?
 
-### 7:50 am - 9:00 am:
+### 8:00 am - 9:00 am:
 
 Online Masterclass with the main mentor
 
-### 9:00 am - 5:00 pm:
+### 8:00 am - 5:00 pm:
 
 Various activities can happen during this time frame:
 
@@ -34,7 +34,7 @@ Various activities can happen during this time frame:
 - Sprint retrospective
 - Resolving doubts through chat
 
-### 04:00 pm - 5:00 pm:
+### 06:00 pm - 7:00 pm:
 
 Online Masterclass with the main mentor
 
