@@ -1,0 +1,13 @@
+export { addContact } from "./Contact/addContact.js";
+export { filterContacts } from "./Contact/filterContacts.js";
+
+export function updateContactList(contactList, contacts) {
+  contactList.innerHTML = "";
+  contacts.forEach((contact) => {
+    const li = document.createElement("li");
+    li.classList.add("contact-item");
+    li.setAttribute("data-id", contact.id);
+    li.innerHTML = `<strong>${contact.name}</strong> - ${contact.phone} <button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button>`;
+    contactList.appendChild(li);
+  });
+}
