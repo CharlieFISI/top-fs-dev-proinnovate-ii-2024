@@ -30,7 +30,7 @@ const usersResponse = {
 };
 
 const postResponse = {
-  status: 200,
+  status: 400,
   data: [
     {
       id: 1,
@@ -168,6 +168,7 @@ button.addEventListener('click', () => {
           makeRequest('comments', (error, data) => {
             if (error) {
               console.error(error);
+              throw new Error('Request failed');
             } else {
               console.log(data);
               appendToList('comments-list', data, (item) => item.name);
@@ -202,12 +203,6 @@ function makeRequestPromise(url) {
     }, 3000);
   });
 }
-
-// const promise = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     resolve('Hello, World from promise!');
-//   }, 5000);
-// });
 
 const button2 = document.getElementById('button2');
 
@@ -315,3 +310,56 @@ button6.addEventListener('click', async () => {
   });
 });
 
+// ASYNC/AWAIT
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     // resolve('Hello, World from promise!');
+//     reject(new Error('Something went wrong'));
+//   }, 2000);
+// });
+
+// const asyncFunction = async () => {
+//   try {
+//     const data = await promise;
+//     console.log(data);
+//     console.log('inside async function');
+//     return data;
+//   } catch (error) {
+//     console.error(error);
+//     return null;
+//   }
+// };
+
+const button7 = document.getElementById('button7');
+
+button7.addEventListener('click', async () => {
+  console.log('button clicked');
+  try {
+    // const users = await makeRequestPromise('users');
+    // const posts = await makeRequestPromise('posts');
+    // const comments = await makeRequestPromise('comments');
+
+    const [
+      { value: users, reason: userError },
+      { value: posts, reason: postsError },
+      { value: comments, reason: commentsError },
+    ] = await Promise.allSettled([
+      makeRequestPromise('users'),
+      makeRequestPromise('posts'),
+      makeRequestPromise('comments'),
+    ]);
+
+    users && appendToList('users-list', users, (item) => item.name);
+    posts && appendToList('posts-list', posts, (item) => item.title);
+    comments && appendToList('comments-list', comments, (item) => item.name);
+
+    if (userError || postsError || commentsError) {
+      throw new Error('Request failed');
+    }
+  } catch (error) {
+    console.error(error);
+  } finally {
+    console.log('Done');
+  }
+});
